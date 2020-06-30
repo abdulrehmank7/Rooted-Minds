@@ -11,4 +11,12 @@
     <string name="about_the_functions">About the Functions</string>
     <string name="function_desc">Nature therapy, sometimes referred to as ecotherapy, describes a broad group of techniques or treatments with the intention of improving an individual\'s mental or physical health, specifically with an individual\'s presence within nature.\n\nOur team believes that Nature Therapy would bring a sustainable method of improving mental wellness. In addition, Nature Therapy provides a way for the user to connect to nature and unwind from the fast-paced environment of Singapore.</string>
     <string name="proceed">Proceed</string>
+    <string name="indemnity_agreement">Indemnity Agreement</string>
+    <string name="accept_terms">I ACCEPT AND\nACKNOWLEDGE THIS\nAGREEMENT</string>
+    <string name="home">Home</string>
+    <string name="my_progress">My Progress</string>
+    <string name="reflection">Reflection</string>
+    <string name="our_partners">Our Partners</string>
+    <string name="helplines">Helplines</string>
+    <string name="references">References</string>
 </resources>

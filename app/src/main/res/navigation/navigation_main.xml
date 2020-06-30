@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
     app:startDestination="@id/onboardFragment">
 
     <fragment
         android:id="@+id/onboardFragment"
         android:name="com.arkapp.rootedminds.ui.onboard.OnboardFragment"
-        android:label="OnboardFragment" />
+        android:label="OnboardFragment">
+        <action
+            android:id="@+id/action_onboardFragment_to_termsAndConditionFragment"
+            app:destination="@id/termsAndConditionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsAndConditionFragment"
+        android:name="com.arkapp.rootedminds.ui.termsandcondition.TermsAndConditionFragment"
+        android:label="fragment_terms_and_condition"
+        tools:layout="@layout/fragment_terms_and_condition">
+        <action
+            android:id="@+id/action_termsAndConditionFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.arkapp.rootedminds.ui.discover.DiscoverFragment"
+        android:label="fragment_discover"
+        tools:layout="@layout/fragment_discover" />
 </navigation>

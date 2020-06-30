@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.onboard.OnboardFragment">
+    tools:context=".ui.termsandcondition.TermsAndConditionFragment">
 
     <include
         android:id="@+id/include"
@@ -18,7 +18,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/green1"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include">
@@ -32,11 +32,12 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:background="@color/light1"
+                android:background="@color/green1"
+                android:elevation="8dp"
                 android:fontFamily="@font/europa_bold"
                 android:gravity="center"
-                android:text="@string/about_us"
-                android:textColor="@color/black"
+                android:text="@string/indemnity_agreement"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -47,30 +48,36 @@
                 android:id="@+id/ivMain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/img_intro"
+                android:src="@drawable/img_term_and_condition"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btProceed"
+                android:id="@+id/btAccept"
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:layout_marginStart="22dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="58dp"
                 android:layout_marginTop="58dp"
-                android:layout_marginEnd="22dp"
+                android:layout_marginEnd="58dp"
                 android:layout_marginBottom="58dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/proceed"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:backgroundTint="@color/purple1"
-                app:cornerRadius="16dp"
+                android:fontFamily="@font/verdana_bold"
+                android:text="@string/accept_terms"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="37dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivMain"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"
+                app:rippleColor="@color/green1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
