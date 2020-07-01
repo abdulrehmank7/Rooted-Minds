@@ -26,6 +26,8 @@
         app:headerLayout="@layout/nav_header"
         app:itemBackground="@color/green3"
         app:itemIconTint="@color/white"
+        app:itemTextAppearance="@style/NavigationDrawerStyle"
         app:itemTextColor="@color/white"
         app:menu="@menu/menu_first_screen" />
+
 </androidx.drawerlayout.widget.DrawerLayout>

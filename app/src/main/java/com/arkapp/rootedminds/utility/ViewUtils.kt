@@ -45,7 +45,7 @@ fun View.showSnack(msg: String?) {
             this,
             msg!!,
             Snackbar.LENGTH_SHORT
-        ).show()
+                     ).show()
     } catch (e: Exception) {
         e.printStackTrace()
     }
@@ -57,7 +57,7 @@ fun View.showSnackLong(msg: String?) {
             this,
             msg!!,
             Snackbar.LENGTH_LONG
-        ).show()
+                     ).show()
     } catch (e: Exception) {
         e.printStackTrace()
     }
@@ -69,7 +69,7 @@ fun View.showIndefiniteSnack(msg: String?): Snackbar? {
             this,
             msg!!,
             Snackbar.LENGTH_INDEFINITE
-        ).also { it.show() }
+                            ).also { it.show() }
     } catch (e: Exception) {
         e.printStackTrace()
     }
@@ -99,14 +99,14 @@ fun convertDpToPixel(dpValue: Float, context: Context): Float {
         TypedValue.COMPLEX_UNIT_DIP,
         dpValue,
         context.resources.displayMetrics
-    )
+                                    )
 }
 
 fun Window.disableTouch() {
     setFlags(
         WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
         WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
-    )
+            )
 }
 
 fun Window.enableTouch() {
@@ -142,9 +142,20 @@ fun Context.pxFromDp(dp: Float) = dp * resources.displayMetrics.density
 
 fun RecyclerView.initVerticalAdapter(
     adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>,
-    hasFixedSize: Boolean
-) {
+    hasFixedSize: Boolean) {
     val llm = LinearLayoutManager(this.context)
+    this.setHasFixedSize(hasFixedSize)
+    this.setItemViewCacheSize(10)
+    this.layoutManager = llm
+    adapter.setHasStableIds(true)
+    this.adapter = adapter
+}
+
+fun RecyclerView.initHorizontalAdapter(
+    adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>,
+    hasFixedSize: Boolean) {
+    val llm = LinearLayoutManager(this.context)
+    llm.orientation = LinearLayoutManager.HORIZONTAL
     this.setHasFixedSize(hasFixedSize)
     this.setItemViewCacheSize(10)
     this.layoutManager = llm
@@ -157,8 +168,7 @@ fun Context.showAlertDialog(
     message: String,
     positiveTxt: String?,
     negativeTxt: String,
-    positiveListener: DialogInterface.OnClickListener?
-) {
+    positiveListener: DialogInterface.OnClickListener?) {
 
     MaterialAlertDialogBuilder(this)
         .setTitle(title)

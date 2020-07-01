@@ -29,5 +29,10 @@
         <item name="backgroundTint">@color/transparent</item>
     </style>
 
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+    </style>
+
 
 </resources>
