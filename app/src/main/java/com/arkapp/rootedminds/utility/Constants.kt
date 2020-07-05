@@ -1,6 +1,7 @@
 package com.arkapp.rootedminds.utility
 
 import com.arkapp.rootedminds.R
+import com.arkapp.rootedminds.data.models.Category
 import com.arkapp.rootedminds.data.models.Feature
 
 /**
@@ -20,4 +21,18 @@ fun getFeatures(): ArrayList<Feature> {
     features.add(Feature("Relationship\nwith Trees", "", R.drawable.img_feature6, R.drawable.ic_feature6))
 
     return features
+}
+
+
+fun getCategories(): ArrayList<Category> {
+
+    val categories = ArrayList<Category>()
+
+    categories.add(Category("Individual Activities", R.drawable.img_category1))
+    categories.add(Category("Group Activities", R.drawable.img_category2))
+    categories.add(Category("Increase Positive Feeling", R.drawable.img_category3))
+    categories.add(Category("Relieve Stress", R.drawable.img_category4))
+    categories.add(Category("Improve Memory", R.drawable.img_category5))
+
+    return categories
 }

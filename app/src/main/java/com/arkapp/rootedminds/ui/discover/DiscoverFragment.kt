@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.arkapp.rootedminds.R
-import com.arkapp.rootedminds.utility.getFeatures
-import com.arkapp.rootedminds.utility.initHorizontalAdapter
-import com.arkapp.rootedminds.utility.show
+import com.arkapp.rootedminds.utility.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_discover.*
 import kotlinx.android.synthetic.main.include_toolbar.*
@@ -19,7 +17,10 @@ class DiscoverFragment : Fragment(R.layout.fragment_discover) {
         ivMenu.show()
         ivMenu.setOnClickListener { requireActivity().drawerLayout.open() }
 
-        val adapter = HomeFeatureAdapter(getFeatures())
-        rvFeature.initHorizontalAdapter(adapter, true)
+        val homeFeatureAdapter = HomeFeatureAdapter(getFeatures())
+        rvFeature.initHorizontalAdapter(homeFeatureAdapter, true)
+
+        val homeCategoryAdapter = HomeCategoryAdapter(getCategories())
+        rvCategory.initVerticalAdapter(homeCategoryAdapter, true)
     }
 }

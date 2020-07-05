@@ -23,5 +23,12 @@ class MainActivity : AppCompatActivity() {
                 else
                     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
             }
+
+        navView.setNavigationItemSelectedListener {
+            if (it.itemId == R.id.menu5) {
+                findNavController(R.id.fragment).navigate(R.id.action_discoverFragment_to_partnersFragment)
+            }
+            true
+        }
     }
 }

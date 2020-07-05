@@ -26,5 +26,14 @@
         android:id="@+id/discoverFragment"
         android:name="com.arkapp.rootedminds.ui.discover.DiscoverFragment"
         android:label="fragment_discover"
-        tools:layout="@layout/fragment_discover" />
+        tools:layout="@layout/fragment_discover">
+        <action
+            android:id="@+id/action_discoverFragment_to_partnersFragment"
+            app:destination="@id/partnersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partnersFragment"
+        android:name="com.arkapp.rootedminds.ui.partners.PartnersFragment"
+        android:label="fragment_partners"
+        tools:layout="@layout/fragment_partners" />
 </navigation>
