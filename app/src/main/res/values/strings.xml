@@ -20,4 +20,10 @@
     <string name="helplines">Helplines</string>
     <string name="references">References</string>
     <string name="featured">Featured</string>
+    <string name="category">Categories</string>
+    <string name="individual_activities">Individual Activities</string>
+    <string name="group_activities">Group Activities</string>
+    <string name="inc_positive_activities">Increase Positive Feelings Activities</string>
+    <string name="inc_stress_relief_activities">Relief Stress Activities</string>
+    <string name="inc_improve_memory_activities">Improve Memory Activities</string>
 </resources>

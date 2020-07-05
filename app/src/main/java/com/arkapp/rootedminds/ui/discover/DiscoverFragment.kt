@@ -3,6 +3,7 @@ package com.arkapp.rootedminds.ui.discover
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.arkapp.rootedminds.R
 import com.arkapp.rootedminds.utility.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +21,7 @@ class DiscoverFragment : Fragment(R.layout.fragment_discover) {
         val homeFeatureAdapter = HomeFeatureAdapter(getFeatures())
         rvFeature.initHorizontalAdapter(homeFeatureAdapter, true)
 
-        val homeCategoryAdapter = HomeCategoryAdapter(getCategories())
+        val homeCategoryAdapter = HomeCategoryAdapter(getCategories(), findNavController())
         rvCategory.initVerticalAdapter(homeCategoryAdapter, true)
     }
 }

@@ -30,10 +30,18 @@
         <action
             android:id="@+id/action_discoverFragment_to_partnersFragment"
             app:destination="@id/partnersFragment" />
+        <action
+            android:id="@+id/action_discoverFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
     </fragment>
     <fragment
         android:id="@+id/partnersFragment"
         android:name="com.arkapp.rootedminds.ui.partners.PartnersFragment"
         android:label="fragment_partners"
         tools:layout="@layout/fragment_partners" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.arkapp.rootedminds.ui.categories.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
 </navigation>

@@ -33,7 +33,10 @@
     <color name="green2">#324755</color>
     <color name="green3">#87BCBF</color>
     <color name="green4">#334856</color>
+    <color name="green5">#7EAEB1</color>
 
     <color name="grey">#7D8184</color>
+
+    <color name="brown1">#464040</color>
 
 </resources>

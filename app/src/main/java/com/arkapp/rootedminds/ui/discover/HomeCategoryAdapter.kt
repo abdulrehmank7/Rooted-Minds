@@ -3,9 +3,11 @@ package com.arkapp.rootedminds.ui.discover
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.arkapp.rootedminds.R
 import com.arkapp.rootedminds.data.models.Category
+import com.arkapp.rootedminds.utility.CURRENT_ACTIVITY
 import com.arkapp.rootedminds.utility.loadImage
 
 /**
@@ -13,7 +15,7 @@ import com.arkapp.rootedminds.utility.loadImage
  * Contact email - abdulrehman0796@gmail.com
  */
 
-class HomeCategoryAdapter(private val allCategories: List<Category>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class HomeCategoryAdapter(private val allCategories: List<Category>, private val findNavController: NavController) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return HomeCategoryViewHolder(
@@ -29,6 +31,11 @@ class HomeCategoryAdapter(private val allCategories: List<Category>) : RecyclerV
 
         binding.ivTop.loadImage(allCategories[position].imgRes!!)
         binding.tvTitle.text = allCategories[position].title
+
+        binding.cvParent.setOnClickListener {
+            CURRENT_ACTIVITY = position
+            findNavController.navigate(R.id.action_discoverFragment_to_categoriesFragment)
+        }
     }
 
     override fun getItemCount() = allCategories.size
