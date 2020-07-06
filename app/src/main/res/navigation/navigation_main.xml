@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_discoverFragment_to_activityDescriptionFragment"
             app:destination="@id/activityDescriptionFragment" />
+        <action
+            android:id="@+id/action_discoverFragment_to_helplinesFragment"
+            app:destination="@id/helplinesFragment" />
     </fragment>
     <fragment
         android:id="@+id/partnersFragment"
@@ -56,4 +59,17 @@
         android:name="com.arkapp.rootedminds.ui.activityDescription.ActivityDescriptionFragment"
         android:label="fragment_activity_description"
         tools:layout="@layout/fragment_activity_description" />
+    <fragment
+        android:id="@+id/helplinesFragment"
+        android:name="com.arkapp.rootedminds.ui.helplines.HelplinesFragment"
+        android:label="fragment_helplines"
+        tools:layout="@layout/fragment_helplines" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.arkapp.rootedminds.ui.aboutUs.AboutUsFragment"
+        android:label="AboutUsFragment" />
+    <fragment
+        android:id="@+id/referencesFragment"
+        android:name="com.arkapp.rootedminds.ui.references.ReferencesFragment"
+        android:label="ReferencesFragment" />
 </navigation>

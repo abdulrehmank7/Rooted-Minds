@@ -1,4 +1,4 @@
-package com.arkapp.rootedminds.ui.partners
+package com.arkapp.rootedminds.ui.references
 
 import android.os.Bundle
 import android.view.View
@@ -8,8 +8,7 @@ import com.arkapp.rootedminds.utility.show
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 
-
-class PartnersFragment : Fragment(R.layout.fragment_partners) {
+class ReferencesFragment : Fragment(R.layout.fragment_references) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

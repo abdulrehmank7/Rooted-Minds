@@ -18,16 +18,25 @@ class MainActivity : AppCompatActivity() {
 
         findNavController(R.id.fragment)
             .addOnDestinationChangedListener { _: NavController?, destination: NavDestination, _: Bundle? ->
-                if (destination.id == R.id.discoverFragment)
+                if (destination.id == R.id.discoverFragment ||
+                    destination.id == R.id.partnersFragment ||
+                    destination.id == R.id.helplinesFragment ||
+                    destination.id == R.id.aboutUsFragment ||
+                    destination.id == R.id.referencesFragment)
                     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
                 else
                     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
             }
 
         navView.setNavigationItemSelectedListener {
-            if (it.itemId == R.id.menu5) {
-                findNavController(R.id.fragment).navigate(R.id.action_discoverFragment_to_partnersFragment)
+            when (it.itemId) {
+                R.id.menu1 -> findNavController(R.id.fragment).navigate(R.id.discoverFragment)
+                R.id.menu4 -> findNavController(R.id.fragment).navigate(R.id.aboutUsFragment)
+                R.id.menu5 -> findNavController(R.id.fragment).navigate(R.id.partnersFragment)
+                R.id.menu6 -> findNavController(R.id.fragment).navigate(R.id.helplinesFragment)
+                R.id.menu7 -> findNavController(R.id.fragment).navigate(R.id.referencesFragment)
             }
+            drawerLayout.closeDrawers()
             true
         }
     }
