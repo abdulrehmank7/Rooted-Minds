@@ -3,6 +3,9 @@ package com.arkapp.rootedminds.utility
 import android.graphics.Bitmap
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DecodeFormat
+import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.Target.SIZE_ORIGINAL
 
 /**
  * Created by Abdul Rehman on 29-03-2020.
@@ -34,6 +37,10 @@ fun ImageView.loadImage(resId: Int) {
     try {
         Glide.with(this.context)
             .load(resId)
+            .apply(RequestOptions()
+                .fitCenter()
+                .format(DecodeFormat.PREFER_ARGB_8888)
+                .override(SIZE_ORIGINAL))
             .into(this)
     } catch (e: Exception) {
         e.printStackTrace()

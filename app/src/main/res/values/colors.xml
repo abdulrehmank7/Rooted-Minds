@@ -34,8 +34,10 @@
     <color name="green3">#87BCBF</color>
     <color name="green4">#334856</color>
     <color name="green5">#7EAEB1</color>
+    <color name="green6">#4D989D</color>
 
-    <color name="grey">#7D8184</color>
+    <color name="grey1">#7D8184</color>
+    <color name="grey2">#404040</color>
 
     <color name="brown1">#464040</color>
 

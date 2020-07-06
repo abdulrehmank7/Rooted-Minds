@@ -18,7 +18,7 @@ class DiscoverFragment : Fragment(R.layout.fragment_discover) {
         ivMenu.show()
         ivMenu.setOnClickListener { requireActivity().drawerLayout.open() }
 
-        val homeFeatureAdapter = HomeFeatureAdapter(getFeatures())
+        val homeFeatureAdapter = HomeFeatureAdapter(getFeatures(), findNavController())
         rvFeature.initHorizontalAdapter(homeFeatureAdapter, true)
 
         val homeCategoryAdapter = HomeCategoryAdapter(getCategories(), findNavController())

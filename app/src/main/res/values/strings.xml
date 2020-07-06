@@ -26,4 +26,5 @@
     <string name="inc_positive_activities">Increase Positive Feelings Activities</string>
     <string name="inc_stress_relief_activities">Relief Stress Activities</string>
     <string name="inc_improve_memory_activities">Improve Memory Activities</string>
+    <string name="start_now">Start Now</string>
 </resources>

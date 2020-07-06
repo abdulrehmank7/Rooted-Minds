@@ -33,6 +33,9 @@
         <action
             android:id="@+id/action_discoverFragment_to_categoriesFragment"
             app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_discoverFragment_to_activityDescriptionFragment"
+            app:destination="@id/activityDescriptionFragment" />
     </fragment>
     <fragment
         android:id="@+id/partnersFragment"
@@ -43,5 +46,14 @@
         android:id="@+id/categoriesFragment"
         android:name="com.arkapp.rootedminds.ui.categories.CategoriesFragment"
         android:label="fragment_categories"
-        tools:layout="@layout/fragment_categories" />
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_categoriesFragment_to_activityDescriptionFragment"
+            app:destination="@id/activityDescriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityDescriptionFragment"
+        android:name="com.arkapp.rootedminds.ui.activityDescription.ActivityDescriptionFragment"
+        android:label="fragment_activity_description"
+        tools:layout="@layout/fragment_activity_description" />
 </navigation>

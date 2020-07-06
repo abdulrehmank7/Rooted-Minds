@@ -2,6 +2,7 @@ package com.arkapp.rootedminds.utility
 
 import com.arkapp.rootedminds.R
 import com.arkapp.rootedminds.data.models.Activities
+import com.arkapp.rootedminds.data.models.ActivitiesDescription
 import com.arkapp.rootedminds.data.models.Category
 import com.arkapp.rootedminds.data.models.Feature
 
@@ -10,6 +11,7 @@ import com.arkapp.rootedminds.data.models.Feature
  * Contact email - abdulrehman0796@gmail.com
  */
 var CURRENT_ACTIVITY = 0
+var CURRENT_ACTIVITY_DESCRIPTION = ActivitiesDescription()
 
 
 fun getFeatures(): ArrayList<Feature> {
@@ -89,3 +91,57 @@ fun getImproveMemoryActivity(): ArrayList<Activities> {
 
     return activities
 }
+
+val CONNECTING_WITH_EARTH =
+    ActivitiesDescription(
+        "Connecting with Earth",
+        "Solo/Partner",
+        R.drawable.img_individual_activity2,
+        R.drawable.ic_feature4,
+        R.drawable.img_connecting_with_earth_desc,
+        2)
+
+val VISUALISATION_MEDITATION =
+    ActivitiesDescription(
+        "Visualisation Meditation",
+        "Solo/Partner",
+        R.drawable.img_individual_activity1,
+        R.drawable.ic_feature1,
+        R.drawable.img_visual_meditatation_desc,
+        3)
+
+val FRIENDS_WITH_TREES =
+    ActivitiesDescription(
+        "Friends with Trees",
+        "Solo",
+        R.drawable.img_individual_activity4,
+        R.drawable.ic_feature5,
+        R.drawable.img_friends_desc,
+        3)
+
+val CONNECTING_WITH_NATURE =
+    ActivitiesDescription(
+        "Connecting with Nature",
+        "Solo/Partner",
+        R.drawable.img_individual_activity3,
+        R.drawable.ic_feature2,
+        R.drawable.img_connecting_with_nature_desc,
+        10)
+
+val RELATIONSHIP_WALK =
+    ActivitiesDescription(
+        "Relationship Walk",
+        "Partner",
+        R.drawable.img_group_activity2,
+        R.drawable.ic_feature3,
+        R.drawable.img_relationship_desc,
+        55)
+
+val RELATIONSHIP_WITH_TREES =
+    ActivitiesDescription(
+        "Relationship with Trees",
+        "Solo/Partner",
+        R.drawable.img_group_activity1,
+        R.drawable.ic_feature6,
+        R.drawable.img_relationtion_tree_desc,
+        3)
