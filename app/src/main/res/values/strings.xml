@@ -27,4 +27,7 @@
     <string name="inc_stress_relief_activities">Relief Stress Activities</string>
     <string name="inc_improve_memory_activities">Improve Memory Activities</string>
     <string name="start_now">Start Now</string>
+    <string name="current_activity">Current Activity</string>
+    <string name="minutes">minutes</string>
+    <string name="activity_tracking_in_progress">Activity Tracking\nIn Progress…</string>
 </resources>

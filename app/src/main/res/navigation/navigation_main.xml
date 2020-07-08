@@ -58,7 +58,11 @@
         android:id="@+id/activityDescriptionFragment"
         android:name="com.arkapp.rootedminds.ui.activityDescription.ActivityDescriptionFragment"
         android:label="fragment_activity_description"
-        tools:layout="@layout/fragment_activity_description" />
+        tools:layout="@layout/fragment_activity_description">
+        <action
+            android:id="@+id/action_activityDescriptionFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/helplinesFragment"
         android:name="com.arkapp.rootedminds.ui.helplines.HelplinesFragment"
@@ -72,4 +76,9 @@
         android:id="@+id/referencesFragment"
         android:name="com.arkapp.rootedminds.ui.references.ReferencesFragment"
         android:label="ReferencesFragment" />
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.arkapp.rootedminds.ui.timer.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" />
 </navigation>

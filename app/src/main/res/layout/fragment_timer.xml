@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.timer.TimerFragment">
+
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:elevation="-2dp" />
+
+    <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:blk_blurRadius="4"
+        app:blk_downscaleFactor="0.2"
+        app:blk_fps="0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btBack"
+        style="@style/Button.OutlinedButton.IconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_arrow"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/rift_soft_regular"
+        android:text="@string/current_activity"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBack" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvLogo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvActivityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/europa_bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvLogo" />
+
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        android:layout_width="238dp"
+        android:layout_height="238dp"
+        app:cpb_background_progressbar_color="@color/transparent"
+        app:cpb_background_progressbar_width="0dp"
+        app:cpb_indeterminate_mode="false"
+        app:cpb_progress_direction="to_left"
+        app:cpb_progressbar_color="@color/grey3"
+        app:cpb_progressbar_width="8dp"
+        app:cpb_round_border="true"
+        app:cpb_start_angle="0"
+        app:layout_constraintBottom_toBottomOf="@+id/cvTimer"
+        app:layout_constraintEnd_toEndOf="@+id/cvTimer"
+        app:layout_constraintStart_toStartOf="@+id/cvTimer"
+        app:layout_constraintTop_toTopOf="@+id/cvTimer" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvTimer"
+        android:layout_width="188dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="94dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityTitle">
+
+        <io.alterac.blurkit.BlurLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:blk_fps="0" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/rift_soft_light"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="68sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/rift_soft_demi"
+            android:text="@string/minutes"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/europa_bold"
+        android:gravity="center"
+        android:text="@string/activity_tracking_in_progress"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circularProgressBar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btPlay"
+        style="@style/Button.OutlinedButton.IconOnly.NonTransparent"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:elevation="18dp"
+        android:stateListAnimator="@null"
+        app:cornerRadius="34dp"
+        app:icon="@drawable/ic_pause"
+        app:iconSize="45dp"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:rippleColor="@color/colorPrimary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
