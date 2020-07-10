@@ -30,4 +30,5 @@
     <string name="current_activity">Current Activity</string>
     <string name="minutes">minutes</string>
     <string name="activity_tracking_in_progress">Activity Tracking\nIn Progress…</string>
+    <string name="activity_tracking_paused">Activity Tracking\nPaused…</string>
 </resources>

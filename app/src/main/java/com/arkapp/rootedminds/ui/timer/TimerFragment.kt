@@ -1,6 +1,7 @@
 package com.arkapp.rootedminds.ui.timer
 
 import android.annotation.SuppressLint
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
@@ -13,25 +14,49 @@ import kotlinx.android.synthetic.main.fragment_timer.*
 
 class TimerFragment : Fragment(R.layout.fragment_timer) {
 
+    private lateinit var mediaPlayer: MediaPlayer
     private lateinit var countDownTimer: CountDownTimer
 
-    @SuppressLint("SetTextI18n")
+    private var remainingTime = CURRENT_ACTIVITY_DESCRIPTION.timeInMin!!.toLong() * 60000
+
+    private var isPlaying = true
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         ivBg.loadImage(CURRENT_ACTIVITY_DESCRIPTION.imgRes!!)
         ivLogo.loadImage(CURRENT_ACTIVITY_DESCRIPTION.imgResLogo!!)
 
         tvActivityTitle.text = CURRENT_ACTIVITY_DESCRIPTION.title
         tvTime.text = "${CURRENT_ACTIVITY_DESCRIPTION.timeInMin}:00"
 
+        mediaPlayer = MediaPlayer.create(context, CURRENT_ACTIVITY_DESCRIPTION.audioRes!!)
+        mediaPlayer.setScreenOnWhilePlaying(true)
+
         btBack.setOnClickListener { requireActivity().onBackPressed() }
 
         circularProgressBar.progressMax = CURRENT_ACTIVITY_DESCRIPTION.timeInMin!! * 60f
         circularProgressBar.progress = circularProgressBar.progressMax
 
-        countDownTimer = object : CountDownTimer(CURRENT_ACTIVITY_DESCRIPTION.timeInMin!!.toLong() * 60000, 1000) {
+        startTracking()
+
+        btPlay.setOnClickListener {
+            if (isPlaying) {
+                btPlay.setIconResource(R.drawable.ic_play)
+                stopTracking()
+            } else {
+                btPlay.setIconResource(R.drawable.ic_pause)
+                startTracking()
+            }
+        }
+    }
+
+    private fun startTracking() {
+        println("started tracking...")
+        countDownTimer = object : CountDownTimer(remainingTime, 1000) {
+
+            @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
+                remainingTime = millisUntilFinished
                 val seconds = ((millisUntilFinished / 1000) % 60)
                 val minutes = millisUntilFinished / 60000
 
@@ -40,23 +65,35 @@ class TimerFragment : Fragment(R.layout.fragment_timer) {
                         "0$seconds"
                     else
                         "$seconds"
-                
+
                 tvTime.text = "$minutes:$formattedSeconds"
 
                 circularProgressBar.progress = circularProgressBar.progress - 1
             }
 
+            @SuppressLint("SetTextI18n")
             override fun onFinish() {
                 tvTime.text = "00:00"
             }
         }
-
         countDownTimer.start()
+        isPlaying = true
+        tvTrackProgess.text = getString(R.string.activity_tracking_in_progress)
+        mediaPlayer.start()
+    }
+
+    private fun stopTracking() {
+        mediaPlayer.pause()
+        println("stopping tracking...")
+        countDownTimer.cancel()
+        isPlaying = false
+        tvTrackProgess.text = getString(R.string.activity_tracking_paused)
     }
 
     override fun onStop() {
         super.onStop()
-        countDownTimer.cancel()
+        stopTracking()
+        mediaPlayer.release()
     }
 
 }

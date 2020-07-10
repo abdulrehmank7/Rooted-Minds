@@ -99,7 +99,8 @@ val CONNECTING_WITH_EARTH =
         R.drawable.img_individual_activity2,
         R.drawable.ic_feature4,
         R.drawable.img_connecting_with_earth_desc,
-        2)
+        2,
+        R.raw.sound_connecting_with_nature)
 
 val VISUALISATION_MEDITATION =
     ActivitiesDescription(
@@ -108,7 +109,8 @@ val VISUALISATION_MEDITATION =
         R.drawable.img_individual_activity1,
         R.drawable.ic_feature1,
         R.drawable.img_visual_meditatation_desc,
-        3)
+        3,
+        R.raw.sound_visualisation_meditation)
 
 val FRIENDS_WITH_TREES =
     ActivitiesDescription(
@@ -117,7 +119,8 @@ val FRIENDS_WITH_TREES =
         R.drawable.img_individual_activity4,
         R.drawable.ic_feature5,
         R.drawable.img_friends_desc,
-        3)
+        3,
+        R.raw.sound_connecting_with_nature)
 
 val CONNECTING_WITH_NATURE =
     ActivitiesDescription(
@@ -126,7 +129,8 @@ val CONNECTING_WITH_NATURE =
         R.drawable.img_individual_activity3,
         R.drawable.ic_feature2,
         R.drawable.img_connecting_with_nature_desc,
-        10)
+        10,
+        R.raw.sound_connecting_with_nature)
 
 val RELATIONSHIP_WALK =
     ActivitiesDescription(
@@ -135,7 +139,8 @@ val RELATIONSHIP_WALK =
         R.drawable.img_group_activity2,
         R.drawable.ic_feature3,
         R.drawable.img_relationship_desc,
-        55)
+        55,
+        R.raw.sound_connecting_with_nature)
 
 val RELATIONSHIP_WITH_TREES =
     ActivitiesDescription(
@@ -144,4 +149,5 @@ val RELATIONSHIP_WITH_TREES =
         R.drawable.img_group_activity1,
         R.drawable.ic_feature6,
         R.drawable.img_relationtion_tree_desc,
-        3)
+        3,
+        R.raw.sound_connecting_with_nature)
