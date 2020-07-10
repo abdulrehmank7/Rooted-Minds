@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_main"
-    app:startDestination="@id/onboardFragment">
+    app:startDestination="@id/discoverFragment">
 
     <fragment
         android:id="@+id/onboardFragment"
@@ -20,7 +20,10 @@
         tools:layout="@layout/fragment_terms_and_condition">
         <action
             android:id="@+id/action_termsAndConditionFragment_to_discoverFragment"
-            app:destination="@id/discoverFragment" />
+            app:destination="@id/discoverFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/discoverFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/discoverFragment"
@@ -80,5 +83,21 @@
         android:id="@+id/timerFragment"
         android:name="com.arkapp.rootedminds.ui.timer.TimerFragment"
         android:label="fragment_timer"
-        tools:layout="@layout/fragment_timer" />
+        tools:layout="@layout/fragment_timer">
+        <action
+            android:id="@+id/action_timerFragment_to_activityCompletedFragment"
+            app:destination="@id/activityCompletedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityCompletedFragment"
+        android:name="com.arkapp.rootedminds.ui.activityCompleted.ActivityCompletedFragment"
+        android:label="fragment_activity_completed"
+        tools:layout="@layout/fragment_activity_completed">
+        <action
+            android:id="@+id/action_activityCompletedFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/discoverFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

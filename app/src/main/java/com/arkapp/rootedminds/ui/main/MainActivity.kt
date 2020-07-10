@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import com.arkapp.rootedminds.R
+import com.arkapp.rootedminds.data.preferences.PrefSession
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -15,6 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+
+        val prefSession = PrefSession(this)
+        if (!prefSession.isAppOpened()) {
+            findNavController(R.id.fragment).navigate(R.id.onboardFragment)
+        }
 
         findNavController(R.id.fragment)
             .addOnDestinationChangedListener { _: NavController?, destination: NavDestination, _: Bundle? ->

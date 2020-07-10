@@ -91,11 +91,6 @@
         android:strokeWidth="1"
         android:strokeColor="#4d989d" />
     <path
-        android:fillColor="#fff"
-        android:pathData="M18.461,18.38m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
-        android:strokeWidth="1"
-        android:strokeColor="#00000000" />
-    <path
         android:fillColor="#00000000"
         android:pathData="M18.461,18.38m-1.5,0a1.5,1.5 0,1 1,3 0a1.5,1.5 0,1 1,-3 0"
         android:strokeWidth="1"

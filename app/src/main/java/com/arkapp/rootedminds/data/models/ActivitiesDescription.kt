@@ -11,4 +11,5 @@ data class ActivitiesDescription(
     var imgResLogo: Int? = null,
     var imgResDesc: Int? = null,
     var timeInMin: Int? = null,
-    var audioRes: Int? = null)
+    var audioRes: Int? = null,
+    var completionTitle: String? = null)

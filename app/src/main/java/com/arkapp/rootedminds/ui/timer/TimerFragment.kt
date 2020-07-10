@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.arkapp.rootedminds.R
 import com.arkapp.rootedminds.utility.CURRENT_ACTIVITY_DESCRIPTION
 import com.arkapp.rootedminds.utility.loadImage
@@ -17,10 +18,11 @@ class TimerFragment : Fragment(R.layout.fragment_timer) {
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var countDownTimer: CountDownTimer
 
-    private var remainingTime = CURRENT_ACTIVITY_DESCRIPTION.timeInMin!!.toLong() * 60000
+    private var remainingTime = 1000L/*CURRENT_ACTIVITY_DESCRIPTION.timeInMin!!.toLong() * 60000*/
 
     private var isPlaying = true
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         ivBg.loadImage(CURRENT_ACTIVITY_DESCRIPTION.imgRes!!)
@@ -74,6 +76,7 @@ class TimerFragment : Fragment(R.layout.fragment_timer) {
             @SuppressLint("SetTextI18n")
             override fun onFinish() {
                 tvTime.text = "00:00"
+                findNavController().navigate(R.id.action_timerFragment_to_activityCompletedFragment)
             }
         }
         countDownTimer.start()

@@ -44,5 +44,9 @@
         <item name="android:fontFamily">@font/proxima_nova_regular</item>
     </style>
 
+    <style name="OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
 
 </resources>
