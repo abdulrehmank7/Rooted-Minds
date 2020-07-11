@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="38dp"
+    android:layout_height="38dp">
+
+    <TextView
+        android:id="@+id/calendarDayText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:fontFamily="@font/rift_soft_demi"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/grey4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="22" />
+
+    <ImageView
+        android:id="@+id/ivBorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_square"
+        android:elevation="4dp"
+        android:rotation="45"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,4 +33,9 @@
     <string name="activity_tracking_paused">Activity Tracking\nPaused…</string>
     <string name="awesome_completion">Awesome Completion!</string>
     <string name="back_to_activities">BACK TO ACTIVITIES</string>
+    <string name="most_tracked_activity">MOST TRACKED\nACTIVITY</string>
+    <string name="achievements">Achievements</string>
+    <string name="month">Month</string>
+    <string name="awards_progression">Awards Progression</string>
+    <string name="activities_tracked">ACTIVITIES\nTRACKED</string>
 </resources>

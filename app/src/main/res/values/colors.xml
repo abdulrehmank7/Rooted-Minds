@@ -37,11 +37,17 @@
     <color name="green6">#4D989D</color>
     <color name="green7">#5C888A</color>
     <color name="green8">#5B7E80</color>
+    <color name="green9">#7BA9AC</color>
 
     <color name="grey1">#7D8184</color>
     <color name="grey2">#404040</color>
     <color name="grey3">#8296B1</color>
+    <color name="grey4">#6E8CA0</color>
+    <color name="grey5">#8D8C8C</color>
 
+    <color name="brown">#A05736</color>
     <color name="brown1">#464040</color>
+
+    <color name="orange">#D97D54</color>
 
 </resources>

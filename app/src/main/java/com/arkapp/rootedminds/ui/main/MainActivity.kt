@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
                     destination.id == R.id.partnersFragment ||
                     destination.id == R.id.helplinesFragment ||
                     destination.id == R.id.aboutUsFragment ||
-                    destination.id == R.id.referencesFragment)
+                    destination.id == R.id.referencesFragment ||
+                    destination.id == R.id.monthViewFragment)
                     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
                 else
                     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.menu1 -> findNavController(R.id.fragment).navigate(R.id.discoverFragment)
+                R.id.menu2 -> findNavController(R.id.fragment).navigate(R.id.monthViewFragment)
                 R.id.menu4 -> findNavController(R.id.fragment).navigate(R.id.aboutUsFragment)
                 R.id.menu5 -> findNavController(R.id.fragment).navigate(R.id.partnersFragment)
                 R.id.menu6 -> findNavController(R.id.fragment).navigate(R.id.helplinesFragment)

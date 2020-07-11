@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.monthView.MonthViewFragment">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMonth"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/green9"
+        android:elevation="16dp"
+        android:fontFamily="@font/europa_bold"
+        android:gravity="center"
+        android:text="@string/awards_progression"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMonth">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/bgView"
+                android:layout_width="match_parent"
+                android:layout_height="218dp"
+                android:background="@color/green9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvLogo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_feature1"
+                    android:tint="@color/green6" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvActivityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/europa_bold"
+                android:gravity="center"
+                android:lines="2"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvLogo" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="38dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvActivityTitle" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/rift_soft_demi"
+                android:gravity="center"
+                android:text="@string/most_tracked_activity"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/bgView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btAchievementSelection"
+                style="@style/Button.OutlinedButton.IconOnly.NonTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/rift_soft_demi"
+                android:stateListAnimator="@null"
+                android:text="@string/achievements"
+                android:textColor="@color/orange"
+                app:backgroundTint="@color/white"
+                app:icon="@drawable/ic_achievement_selection"
+                app:iconPadding="8dp"
+                app:iconTint="@color/orange"
+                app:layout_constraintBottom_toBottomOf="@+id/view8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgView"
+                app:rippleColor="@color/grey4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btMonthSelection"
+                style="@style/Button.OutlinedButton.IconOnly.NonTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/rift_soft_demi"
+                android:stateListAnimator="@null"
+                android:text="@string/month"
+                android:textColor="@color/grey4"
+                app:backgroundTint="@color/white"
+                app:icon="@drawable/ic_month_selection"
+                app:iconPadding="8dp"
+                app:iconTint="@color/grey4"
+                app:layout_constraintBottom_toBottomOf="@+id/view8"
+                app:layout_constraintStart_toEndOf="@+id/btAchievementSelection"
+                app:layout_constraintTop_toBottomOf="@+id/bgView"
+                app:rippleColor="@color/grey4" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/europa_regular"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="S"
+                android:textColor="@color/green4"
+                app:layout_constraintEnd_toStartOf="@+id/textView21"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/europa_regular"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="M"
+                android:textColor="@color/green4"
+                app:layout_constraintBottom_toBottomOf="@+id/textView22"
+                app:layout_constraintEnd_toStartOf="@+id/textView20"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView22"
+                app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/europa_regular"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="T"
+                android:textColor="@color/green4"
+                app:layout_constraintBottom_toBottomOf="@+id/textView21"
+                app:layout_constraintEnd_toStartOf="@+id/textView19"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView21"
+                app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/europa_regular"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="W"
+                android:textColor="@color/green4"
+                app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                app:layout_constraintEnd_toStartOf="@+id/textView18"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView20"
+                app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/europa_regular"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="T"
+                android:textColor="@color/green4"
+                app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                app:layout_constraintEnd_toStartOf="@+id/textView17"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView19"
+                app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/europa_regular"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="F"
+                android:textColor="@color/green4"
+                app:layout_constraintBottom_toBottomOf="@+id/textView18"
+                app:layout_constraintEnd_toStartOf="@+id/textView16"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView18"
+                app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/europa_regular"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="S"
+                android:textColor="@color/green4"
+                app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView17"
+                app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+            <com.kizitonwose.calendarview.CalendarView
+                android:id="@+id/calendarViewFragment"
+                android:layout_width="0dp"
+                android:layout_height="288dp"
+                app:cv_dayViewResource="@layout/calendar_day_layout"
+                app:cv_hasBoundaries="true"
+                app:cv_inDateStyle="allMonths"
+                app:cv_orientation="horizontal"
+                app:cv_outDateStyle="endOfRow"
+                app:cv_scrollMode="paged"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView16"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="textView7,view7,tvActivityTitle,cvLogo,calendarViewFragment,textView22,textView21,textView20,textView19,textView18,textView17,textView16" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="138dp"
+                android:layout_height="138dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_award_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/bgView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circularProgressBarShadow"
+                android:layout_width="158dp"
+                android:layout_height="158dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="24dp"
+                android:alpha=".2"
+                app:cpb_background_progressbar_color="@color/transparent"
+                app:cpb_background_progressbar_width="0dp"
+                app:cpb_indeterminate_mode="false"
+                app:cpb_progress_direction="to_left"
+                app:cpb_progressbar_color="@color/brown"
+                app:cpb_progressbar_width="8dp"
+                app:cpb_round_border="true"
+                app:cpb_start_angle="0"
+                app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/circularProgressBar" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circularProgressBar"
+                android:layout_width="158dp"
+                android:layout_height="158dp"
+                android:layout_marginStart="16dp"
+                android:elevation="18dp"
+                app:cpb_background_progressbar_color="@color/transparent"
+                app:cpb_background_progressbar_width="0dp"
+                app:cpb_indeterminate_mode="false"
+                app:cpb_progress_direction="to_left"
+                app:cpb_progressbar_color="@color/white"
+                app:cpb_progressbar_width="8dp"
+                app:cpb_round_border="true"
+                app:cpb_start_angle="0"
+                app:layout_constraintBottom_toBottomOf="@+id/bgView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bgView" />
+
+            <TextView
+                android:id="@+id/tvTotalTracked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:elevation="16dp"
+                android:fontFamily="@font/rift_soft_regular"
+                android:text="0/6"
+                android:textColor="@color/white"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/circularProgressBar" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="28dp"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:elevation="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalTracked" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:elevation="16dp"
+                android:fontFamily="@font/rift_soft_demi"
+                android:gravity="center"
+                android:text="@string/activities_tracked"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressBar" />
+
+            <ImageView
+                android:id="@+id/ivTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_award_title"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+            <HorizontalScrollView
+                android:id="@+id/svLogos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivTitle"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvLogo1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="35dp"
+                        app:cardElevation="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivLogo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_empty_logo" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvLogo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/europa_regular"
+                        android:gravity="center"
+                        android:textColor="@color/grey5"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cvLogo1"
+                        app:layout_constraintStart_toStartOf="@+id/cvLogo1"
+                        app:layout_constraintTop_toBottomOf="@+id/cvLogo1"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvLogo2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="35dp"
+                        app:cardElevation="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/cvLogo1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivLogo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_empty_logo" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvLogo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/europa_regular"
+                        android:gravity="center"
+                        android:textColor="@color/grey5"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cvLogo2"
+                        app:layout_constraintStart_toStartOf="@+id/cvLogo2"
+                        app:layout_constraintTop_toBottomOf="@+id/cvLogo2"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvLogo3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="35dp"
+                        app:cardElevation="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/cvLogo2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivLogo3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_empty_logo" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvLogo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/europa_regular"
+                        android:gravity="center"
+                        android:textColor="@color/grey5"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cvLogo3"
+                        app:layout_constraintStart_toStartOf="@+id/cvLogo3"
+                        app:layout_constraintTop_toBottomOf="@+id/cvLogo3"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvLogo4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="35dp"
+                        app:cardElevation="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/cvLogo3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivLogo4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_empty_logo" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvLogo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/europa_regular"
+                        android:gravity="center"
+                        android:textColor="@color/grey5"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cvLogo4"
+                        app:layout_constraintStart_toStartOf="@+id/cvLogo4"
+                        app:layout_constraintTop_toBottomOf="@+id/cvLogo4"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvLogo5"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="35dp"
+                        app:cardElevation="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/cvLogo4"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivLogo5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_empty_logo" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvLogo5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/europa_regular"
+                        android:gravity="center"
+                        android:textColor="@color/grey5"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cvLogo5"
+                        app:layout_constraintStart_toStartOf="@+id/cvLogo5"
+                        app:layout_constraintTop_toBottomOf="@+id/cvLogo5"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvLogo6"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="35dp"
+                        app:cardElevation="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cvLogo5"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivLogo6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_empty_logo" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvLogo6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/europa_regular"
+                        android:gravity="center"
+                        android:textColor="@color/grey5"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cvLogo6"
+                        app:layout_constraintStart_toStartOf="@+id/cvLogo6"
+                        app:layout_constraintTop_toBottomOf="@+id/cvLogo6"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupAchievement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="imageView6,circularProgressBar,circularProgressBarShadow,svLogos,ivTitle,textView8,view3,tvTotalTracked" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

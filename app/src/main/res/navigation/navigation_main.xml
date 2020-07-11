@@ -100,4 +100,9 @@
             app:popUpTo="@id/discoverFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/monthViewFragment"
+        android:name="com.arkapp.rootedminds.ui.monthView.MonthViewFragment"
+        android:label="fragment_month_view"
+        tools:layout="@layout/fragment_month_view" />
 </navigation>
