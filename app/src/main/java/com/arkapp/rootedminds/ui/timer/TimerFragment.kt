@@ -96,7 +96,6 @@ class TimerFragment : Fragment(R.layout.fragment_timer) {
     override fun onStop() {
         super.onStop()
         stopTracking()
-        mediaPlayer.release()
     }
 
 }

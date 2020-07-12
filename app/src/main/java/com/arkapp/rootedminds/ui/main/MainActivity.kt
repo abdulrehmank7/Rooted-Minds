@@ -1,6 +1,7 @@
 package com.arkapp.rootedminds.ui.main
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -8,6 +9,8 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import com.arkapp.rootedminds.R
 import com.arkapp.rootedminds.data.preferences.PrefSession
+import com.arkapp.rootedminds.utility.hide
+import com.arkapp.rootedminds.utility.show
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -37,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         navView.setNavigationItemSelectedListener {
+            progressBar.show()
             when (it.itemId) {
                 R.id.menu1 -> findNavController(R.id.fragment).navigate(R.id.discoverFragment)
                 R.id.menu2 -> findNavController(R.id.fragment).navigate(R.id.monthViewFragment)
@@ -47,6 +51,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu7 -> findNavController(R.id.fragment).navigate(R.id.referencesFragment)
             }
             drawerLayout.closeDrawers()
+            Handler().postDelayed({ progressBar.hide() }, 1000)
+
             true
         }
     }
