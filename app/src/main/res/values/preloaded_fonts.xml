@@ -2,5 +2,8 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/playfair_display_bold</item>
+        <item>@font/roboto</item>
+        <item>@font/ubuntu</item>
+        <item>@font/ubuntu_bold</item>
     </array>
 </resources>

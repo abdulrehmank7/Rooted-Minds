@@ -18,7 +18,7 @@ class TimerFragment : Fragment(R.layout.fragment_timer) {
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var countDownTimer: CountDownTimer
 
-    private var remainingTime = 1000L/*CURRENT_ACTIVITY_DESCRIPTION.timeInMin!!.toLong() * 60000*/
+    private var remainingTime = CURRENT_ACTIVITY_DESCRIPTION.timeInMin!!.toLong() * 60000
 
     private var isPlaying = true
 

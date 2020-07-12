@@ -1,10 +1,7 @@
 package com.arkapp.rootedminds.utility
 
 import com.arkapp.rootedminds.R
-import com.arkapp.rootedminds.data.models.Activities
-import com.arkapp.rootedminds.data.models.ActivitiesDescription
-import com.arkapp.rootedminds.data.models.Category
-import com.arkapp.rootedminds.data.models.Feature
+import com.arkapp.rootedminds.data.models.*
 
 /**
  * Created by Abdul Rehman on 01-07-2020.
@@ -12,6 +9,7 @@ import com.arkapp.rootedminds.data.models.Feature
  */
 var CURRENT_ACTIVITY = 0
 var CURRENT_ACTIVITY_DESCRIPTION = ActivitiesDescription()
+var CURRENT_OPENED_REFLECTION_HISTORY: ReflectionParsed? = null
 
 
 fun getFeatures(): ArrayList<Feature> {

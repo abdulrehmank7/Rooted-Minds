@@ -38,4 +38,18 @@
     <string name="month">Month</string>
     <string name="awards_progression">Awards Progression</string>
     <string name="activities_tracked">ACTIVITIES\nTRACKED</string>
+    <string name="add_reflection">Add Reflection</string>
+    <string name="excursion_log">Excursion Log</string>
+    <string name="title">Title:</string>
+    <string name="title_here">Title here</string>
+    <string name="location">Location:</string>
+    <string name="location_here">Location here</string>
+    <string name="notes_on_the_overall_scenery">Notes on the overall scenery:</string>
+    <string name="type_your_thoughts_here">Type your thoughts here..</string>
+    <string name="an_initial_observation">An initial observation:</string>
+    <string name="an_observation_that_revealed_itself_to_me_gradually">An observation that revealed itself to me gradually:</string>
+    <string name="a_particularly_memorable_detail">A particularly memorable detail:</string>
+    <string name="changes_i_noticed_in_my_body_during_the_walk">Changes I noticed in my body during the walk:</string>
+    <string name="lingering_sensations_or_emotions">Lingering sensations or emotions:</string>
+    <string name="add">Add</string>
 </resources>

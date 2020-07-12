@@ -105,4 +105,18 @@
         android:name="com.arkapp.rootedminds.ui.monthView.MonthViewFragment"
         android:label="fragment_month_view"
         tools:layout="@layout/fragment_month_view" />
+    <fragment
+        android:id="@+id/reflectionFragment"
+        android:name="com.arkapp.rootedminds.ui.reflection.ReflectionFragment"
+        android:label="fragment_reflection"
+        tools:layout="@layout/fragment_reflection">
+        <action
+            android:id="@+id/action_reflectionFragment_to_addReflectionFragment"
+            app:destination="@id/addReflectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReflectionFragment"
+        android:name="com.arkapp.rootedminds.ui.reflection.AddReflectionFragment"
+        android:label="fragment_add_reflection"
+        tools:layout="@layout/fragment_add_reflection" />
 </navigation>

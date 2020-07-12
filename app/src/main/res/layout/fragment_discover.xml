@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.discover.DiscoverFragment">
 
+    `
+
     <include
         android:id="@+id/include"
         layout="@layout/include_toolbar"
@@ -13,7 +15,7 @@
         android:layout_height="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />`
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

@@ -1,10 +1,11 @@
-package com.arkapp.rootedminds.utility
+package com.arkapp.rootedminds.ui.monthView
 
 import android.content.Context
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.arkapp.rootedminds.R
 import com.arkapp.rootedminds.data.models.TrackedActivityParsed
+import com.arkapp.rootedminds.utility.*
 import com.kizitonwose.calendarview.CalendarView
 import com.kizitonwose.calendarview.model.CalendarDay
 import com.kizitonwose.calendarview.model.DayOwner

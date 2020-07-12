@@ -32,6 +32,9 @@ class MonthViewFragment : Fragment(R.layout.fragment_month_view) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        allParsedActivities.clear()
+        currentDayActivity.clear()
+
         ivMenu.show()
         ivMenu.setOnClickListener { requireActivity().drawerLayout.open() }
 

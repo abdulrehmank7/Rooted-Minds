@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.arkapp.rootedminds.data.models.Reflection
 import com.arkapp.rootedminds.data.models.TrackedActivity
 
 /**
@@ -12,11 +13,14 @@ import com.arkapp.rootedminds.data.models.TrackedActivity
  */
 
 
-@Database(entities = [TrackedActivity::class], version = 1)
+@Database(entities = [TrackedActivity::class, Reflection::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
 
     abstract fun trackedActivityDao(): TrackedActivityDoa
+
+    abstract fun reflectionDoa(): ReflectionDoa
+
 
     companion object {
         const val DATABASE_NAME = "MAIN_ROOTED_MINDS_DATABASE"
