@@ -22,10 +22,8 @@
     <color name="transparent">#00000000</color>
 
     <color name="dark1">#152422</color>
-    <color name="dark2">#1E2432</color>
 
     <color name="light1">#F2F3F3</color>
-    <color name="light2">#D6D8DB</color>
 
     <color name="purple1">#515BDE</color>
 
@@ -36,7 +34,6 @@
     <color name="green5">#7EAEB1</color>
     <color name="green6">#4D989D</color>
     <color name="green7">#5C888A</color>
-    <color name="green8">#5B7E80</color>
     <color name="green9">#7BA9AC</color>
     <color name="green10">#9AD6D9</color>
 

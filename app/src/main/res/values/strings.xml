@@ -1,15 +1,8 @@
 <resources>
     <string name="app_name">Rooted Minds</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="rooted_minds">Rooted Minds</string>
     <string name="about_us">About Us</string>
-    <string name="about_rooted_minds">About Rooted Minds</string>
-    <string name="about_desc">Welcome to Rooted Minds, a simple mobile application with a series of nature-based activities to help users uncover unconventional ways to cope with mental wellness.\n\nContact Us:\nInstagram: @rooted__minds</string>
-    <string name="mission_and_vision">Mission and Vision</string>
-    <string name="moto_desc">Our Motto:\nMake the unconventional, conventional!\n\nWith that, Rooted Minds want to raise self-awareness, knowledge, and self-initiative in improving the mental wellbeing, as well as aspire anyone to be advocates of mental wellness so that the it can be the new norm in today\'s society.</string>
-    <string name="about_the_functions">About the Functions</string>
-    <string name="function_desc">Nature therapy, sometimes referred to as ecotherapy, describes a broad group of techniques or treatments with the intention of improving an individual\'s mental or physical health, specifically with an individual\'s presence within nature.\n\nOur team believes that Nature Therapy would bring a sustainable method of improving mental wellness. In addition, Nature Therapy provides a way for the user to connect to nature and unwind from the fast-paced environment of Singapore.</string>
     <string name="proceed">Proceed</string>
     <string name="indemnity_agreement">Indemnity Agreement</string>
     <string name="accept_terms">I ACCEPT AND\nACKNOWLEDGE THIS\nAGREEMENT</string>
